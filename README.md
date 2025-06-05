@@ -4,7 +4,7 @@ Generating Synthetic Pedestrian Crossing Scenarios with randomised parameters in
 
 ## Synthetic Data Generation
 
-This dataset was generated to **train OSS and BPE models** as spatial feature extractors for downstream pedestrian crossing prediction. These models work at the **frame level**, so temporally realistic pedestrian behaviour is **not required**. The final crossing prediction models are trained on **real-world datasets** to learn temporal cues and intention dynamics.
+This dataset was generated to **train Object Semantic Segmentation (OSS) and Body Pose Estimation (BPE) models** as spatial feature extractors for downstream pedestrian crossing prediction. These models work at the **frame level**, so temporally realistic pedestrian behaviour is **not required**. The final crossing prediction models are trained on **real-world datasets** to learn temporal cues and intention dynamics.
 
 ### Simulation Environment
 
@@ -31,6 +31,9 @@ Each scenario is repeated **21 times**, combining:
 
 This results in **648 variations** simulating diverse urban conditions, enhancing robustness in visual feature extraction.
 
+![Simulated Pedestrian Crossing Scenario](Figures/synth.png)  
+*A sample simulated pedestrian crossing scenario under various lighting and weather conditions.*
+
 ### Data Collection
 
 - **Resolution**: 1920×1080 RGB frames
@@ -46,9 +49,3 @@ This results in **648 variations** simulating diverse urban conditions, enhancin
 - **Total annotated semantic frames**: 15,120  
 - **Total pedestrian frames with joint keypoints**: 725,760  
 
----
-
-### Sample Scenario
-
-![Simulated Pedestrian Crossing Scenario](Figures/synth.png)  
-*A sample simulated pedestrian crossing scenario under various lighting and weather conditions.*
