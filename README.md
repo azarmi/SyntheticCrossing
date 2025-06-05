@@ -1,11 +1,6 @@
 # SyntheticCrossing
 Generating Synthetic Pedestrian Crossing Scenarios with randomised parameters including weather and lighting conditions.    
 
-
-## Synthetic Data Generation
-
-This dataset was generated to **train Object Semantic Segmentation (OSS) and Body Pose Estimation (BPE) models** as spatial feature extractors for downstream pedestrian crossing prediction. These models work at the **frame level**, so temporally realistic pedestrian behaviour is **not required**. The final crossing prediction models are trained on **real-world datasets** to learn temporal cues and intention dynamics.
-
 ### Simulation Environment
 
 Data was generated using **[CARLA](https://carla.org/)**, an open-source urban driving simulator. While hyper-realistic simulation environments may offer detailed textures, CARLA provides an effective **balance between visual diversity and structural control**, making it ideal for domain randomisation and reproducible spatial modelling.
@@ -23,9 +18,8 @@ Data was generated using **[CARLA](https://carla.org/)**, an open-source urban d
 - Ego-vehicle speed: Randomly selected between **15–30 mph**
 - Initial pedestrian distance: Randomly selected between **20–30 meters** from the ego vehicle
 
----
 
-### 🗺️ Simulated Scenario Locations
+### Simulated Scenario Locations
 
 The simulated scenarios in the CARLA environment were collected from the towns illustrated in the figure below:
 
@@ -53,9 +47,8 @@ This results in **648 variations** simulating diverse urban conditions, enhancin
 - **Resolution**: 1920×1080 RGB frames
 - **Frame rate**: 2 FPS for ~10 seconds per scenario
 - **Ground-truth annotations**:
-  - **2D pose keypoints**: 17 body joints per pedestrian (subset of CARLA's 67-point skeleton)
-  - **Semantic segmentation masks** for:
-    - pedestrians, roads, sidewalks, cars, buses, trucks, buildings, sky, traffic signs/lights, poles
+  - **2D pose keypoints**: 17 body joints per pedestrian
+  - **Semantic segmentation masks** for: pedestrians, roads, sidewalks, cars, buses, trucks, buildings, sky, traffic signs/lights, poles
 
 ### Summary
 
